@@ -1,47 +1,55 @@
-# Clínica Daniele Lucena — Landing page Slim
+# Clínica Daniele Lucena — versão boutique
 
-Código extraído da POC_Daniele_Lucena_Slim.html, com HTML, CSS, JavaScript e imagens separados. Mantém o visual, os textos e os fluxos demonstrativos da POC. Não usa React, não exige npm e não precisa de compilação.
+Landing page em HTML, CSS e JavaScript puro. Não precisa de npm ou compilação.
 
-## Abrir no VS Code com Git Bash (Windows)
+## Ver no VS Code
 
-1. Extraia o ZIP. Você terá a pasta `clinica-daniele-lucena`.
-2. Abra essa pasta no Explorador do Windows, clique com o botão direito e escolha **Open Git Bash here** (ou **Mostrar mais opções > Open Git Bash here**).
-3. Execute:
+Abra `index.html` com a extensão Live Server. Alternativa no Git Bash, com Python instalado:
 
 ```bash
-code .
+py -m http.server 5500 --bind 127.0.0.1
 ```
 
-Se o comando `code` não for reconhecido, abra o VS Code e use **Arquivo > Abrir Pasta**, selecionando `clinica-daniele-lucena`.
+Acesse http://localhost:5500. No Linux ou macOS, use `python3` no lugar de `py`.
 
-## Visualizar a página
+## O que mudou
 
-No VS Code, abra Extensões (`Ctrl+Shift+X`) e instale **Live Server**, de **Ritwick Dey**. Clique com o botão direito no `index.html` e escolha **Open with Live Server**. Salve as alterações com `Ctrl+S`; a página será atualizada no navegador.
+- Identidade em creme, oliva e dourado; títulos serifados, abertura compacta e retrato da Daniele.
+- Filtros por área e detalhes de cada cuidado em diálogo acessível.
+- Guia de interesse em dois passos e mensagem editável com cópia e fallback manual.
+- Contato com WhatsApp quando o número oficial for configurado.
+- Menu móvel com fechamento por âncora, clique fora e Escape; seção atual destacada.
+- Animações discretas e respeito à preferência por movimento reduzido.
+- Layouts para celular pequeno, celular, tablet e desktop; barra móvel com área segura.
+- Galeria ampliável e avaliações com controles, exibidas somente quando receberem conteúdo real.
 
-Alternativa pelo terminal, se o Python estiver instalado:
+## Configurar dados oficiais
 
-```bash
-python -m http.server 5500 --bind 127.0.0.1
-```
+Edite `js/config.js`. Todas as opções são locais. Nunca coloque senhas ou dados privados nesse arquivo.
 
-No Windows, se `python` não funcionar e o launcher estiver instalado, use `py -m http.server 5500 --bind 127.0.0.1`. Abra http://localhost:5500 e pressione Ctrl+C no terminal para parar.
+- `whatsapp`: país 55 + DDD + número, somente dígitos. Sem esse dado, o site prepara e copia a mensagem, sem enviar contato.
+- `address`, `hours`, `mapsUrl`, `instagramUrl`: dados confirmados. Campos vazios não aparecem.
+- `ownerPhoto`: caminho para foto individual autorizada. Enquanto vazio, usa o recorte original de referência.
+- `ownerBio`: apresentação profissional validada. Enquanto vazio, mantém o texto de apresentação atual.
+- `servicePhotos`: caminhos para fotos individuais autorizadas, por área.
+- `gallery`: lista com `{ src, alt, caption }`. Lista vazia mantém a galeria oculta.
+- `reviews`: lista com `{ quote, author, sourceUrl }`. Não inserir depoimentos fictícios.
+- `preview`: mantenha `true` até validar textos, serviços e imagens.
 
-Também é possível abrir `index.html` diretamente no navegador, mas um servidor local é preferível para a função de copiar mensagem.
+As imagens originais são referências de composição reaproveitadas por enquadramento CSS. Não foram criadas fotos da clínica nem adicionadas credenciais, endereço, preços ou avaliações não fornecidos.
 
-## Onde editar
+## Conferência manual
 
-| Arquivo | Conteúdo |
-| --- | --- |
-| `index.html` | Textos, seções, botões e estrutura |
-| `css/styles.css` | Cores, fontes, espaçamento e visual no celular |
-| `js/main.js` | Menu, seletor de interesses e modal de contato |
-| `assets/images/referencia-1.png` | Primeira referência visual, usada no retrato e em um cuidado |
-| `assets/images/referencia-2.png` | Segunda referência visual, usada nas outras áreas |
-| `assets/favicon.svg` | Ícone da aba do navegador |
-| `.vscode/` | Configurações e recomendação do Live Server |
+No celular e desktop, confira filtros, abertura e fechamento dos diálogos (incluindo Escape), guia em dois passos, edição/cópia da mensagem e menu móvel. Com dados oficiais preenchidos, confira também o destino do WhatsApp, localização, fotos e avaliações.
 
-As imagens foram extraídas, sem edição, das imagens embutidas na POC original. O CSS utiliza enquadramentos por `background-position` e `background-size`; substituir essas referências por fotos individuais exige ajustar esses valores. As cores principais ficam em `:root`, no início do CSS. As regras para celular ficam em `@media (max-width:760px)`.
+A implementação foi verificada por sintaxe e testes em DOM simulado; a validação visual desta adaptação no navegador deve ser feita localmente.
 
-## Estado atual do contato
+## Referência Lovable
 
-A POC prepara e copia uma mensagem. Ainda não há número oficial de WhatsApp, envio real, backend ou agendamento. O rodapé informa que serviços e conteúdo precisam de validação da clínica. Nenhum site é publicado ao executar este projeto localmente.
+Referência visual separada, não publicada: https://lovable.dev/projects/e06f1f2e-82e5-4201-bb9a-9d8cd6fa856f
+
+Foram adaptadas a composição compacta, hierarquia editorial, paleta e microinterações ao projeto original. A implementação local mantém a foto e os arquivos do repositório existente e não depende do Lovable para funcionar.
+
+## Publicação
+
+Nenhum comando deste pacote faz commit, push ou deploy. Revise localmente antes de qualquer publicação. Um push futuro pode acionar hospedagens já conectadas ao GitHub.

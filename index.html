@@ -1,215 +1,125 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Daniele Lucena — saúde estética e bem-estar. Conheça os cuidados e prepare sua conversa com a clínica.">
-<title>Daniele Lucena | Saúde estética & bem-estar</title>
-<link rel="icon" href="assets/favicon.svg">
-<link rel="stylesheet" href="css/styles.css">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#414e32">
+<title>Daniele Lucena | Mais cuidado. Mais você.</title>
+<meta name="description" content="Explore os cuidados da Clínica Daniele Lucena: estética facial, dermatofuncional e saúde integrativa. Prepare seu primeiro contato.">
+<meta property="og:title" content="Daniele Lucena | Mais cuidado. Mais você."><meta property="og:description" content="Conheça as áreas de cuidado e prepare sua conversa com a clínica."><meta property="og:type" content="website"><meta property="og:locale" content="pt_BR">
+<link rel="icon" href="assets/favicon.svg"><link rel="stylesheet" href="css/styles.css"><link rel="stylesheet" href="css/hero-photo.css"><link rel="stylesheet" href="css/care-v3.css"><link rel="stylesheet" href="css/profile-v4.css"><link rel="stylesheet" href="css/gallery-v5.css"><script src="js/config.js" defer></script><script src="js/clinic-profile-v4.js" defer></script><script src="js/gallery-data-v5.js" defer></script><script src="js/main.js" defer></script><script src="js/care-v3.js" defer></script><script src="js/profile-v4.js" defer></script><script src="js/gallery-v5.js" defer></script>
 </head>
 <body>
-<header>
-<div class="wrap nav">
-<a class="brand" href="#inicio" aria-label="Daniele Lucena, início">Daniele Lucena<small>Saúde estética & bem-estar</small>
-</a>
-<button class="menu" aria-expanded="false" aria-controls="navigation">Menu</button>
-<nav id="navigation" class="navlinks" aria-label="Menu principal">
-<a href="#cuidados">Cuidados</a>
-<a href="#essencia">Nossa essência</a>
-<a href="#duvidas">Dúvidas</a>
-<button class="btn" data-contact>Agendar uma conversa</button>
-</nav>
-</div>
-</header>
-<main class="wrap">
-<div id="inicio" class="hero">
-<div>
-<p class="eyebrow">Seu cuidado começa com você</p>
-<h1>Mais leveza.<br>Mais cuidado.<br>
-<em>Mais você.</em>
-</h1>
-<p class="lead">Saúde, estética e bem-estar em uma conversa sobre o que faz sentido para você.</p>
-<div class="actions">
-<button class="btn" data-contact>Quero uma avaliação</button>
-<a class="btn ghost" href="#cuidados">Conhecer os cuidados</a>
-</div>
-<p class="hero-note">Um primeiro passo, no seu tempo.</p>
-</div>
-<figure class="owner">
-<div class="portrait" role="img" aria-label="Daniele Lucena sorrindo, com jaleco branco">
-</div>
-<figcaption>
-<strong>Daniele Lucena</strong>
-<span>Um olhar atento.<br>Um cuidado próximo.</span>
-</figcaption>
-</figure>
-</div>
-<div class="strip">
-<span>Escuta e acolhimento</span>
-<span>Cuidado individualizado</span>
-<span>Respeito à sua essência</span>
-</div>
-<section id="cuidados">
-<div class="section-top">
-<div>
-<p class="eyebrow">Encontre seu cuidado</p>
-<h2>O que você quer<br>
-<em>cuidar hoje?</em>
-</h2>
-</div>
-<p>Conheça as áreas e converse com a clínica para entender as possibilidades para você.</p>
-</div>
-<div class="cards">
-<article class="card">
-<div class="card-pic facial" role="img" aria-label="Referência de cuidado facial">
-<span class="num">01</span>
-</div>
-<div class="card-body">
-<h3>Estética facial</h3>
-<p>Um olhar para a sua pele, suas necessidades e a beleza dos seus traços.</p>
-<button class="text-btn" data-interest="Estética facial">Quero saber mais</button>
-</div>
-</article>
-<article class="card">
-<div class="card-pic dermato" role="img" aria-label="Equipamento em atendimento estético">
-<span class="num">02</span>
-</div>
-<div class="card-body">
-<h3>Dermatofuncional</h3>
-<p>Converse sobre cuidados com a pele e o corpo, a partir de uma avaliação.</p>
-<button class="text-btn" data-interest="Dermatofuncional">Explorar esse cuidado</button>
-</div>
-</article>
-<article class="card">
-<div class="card-pic wellness" role="img" aria-label="Alimentos frescos como referência de bem-estar">
-<span class="num">03</span>
-</div>
-<div class="card-body">
-<h3>Saúde integrativa</h3>
-<p>Espaço para conversar sobre bem-estar, rotina e cuidado de forma integrada.</p>
-<button class="text-btn" data-interest="Saúde integrativa">Conhecer a abordagem</button>
-</div>
-</article>
-</div>
-<div class="helper">
-<div>
-<h3>Não sabe por onde começar?</h3>
-<p>Escolha um interesse para preparar sua conversa.</p>
-</div>
-<div class="chips" role="group" aria-label="Seu interesse">
-<button class="chip" aria-pressed="false" data-choice="Pele e rosto">Pele e rosto</button>
-<button class="chip" aria-pressed="false" data-choice="Cuidados corporais">Corpo</button>
-<button class="chip" aria-pressed="false" data-choice="Bem-estar">Bem-estar</button>
-<button class="chip" aria-pressed="false" data-choice="Uma primeira orientação">Preciso de orientação</button>
-</div>
-<div class="result" aria-live="polite">
-<p id="interestResult">
-</p>
-<button class="btn" id="interestContact">Preparar meu contato</button>
-</div>
-</div>
+<a href="#conteudo" class="skip-link">Pular para o conteúdo</a>
+<header><div class="wrap nav">
+<a class="brand" href="#inicio" aria-label="Daniele Lucena, início"><span class="monogram" aria-hidden="true">dl</span><span>Daniele Lucena<small>Saúde estética & bem-estar</small></span></a>
+<button class="menu" type="button" aria-expanded="false" aria-controls="navigation"><span aria-hidden="true">☰</span> Menu</button>
+<nav id="navigation" aria-label="Navegação principal"><a href="#cuidados">Cuidados</a><a href="#essencia">Nossa essência</a><a href="#galeria">Galeria</a><a href="#avaliacoes">Avaliações</a><a href="#duvidas">Dúvidas</a><button class="btn small" type="button" data-contact><span data-contact-label>Preparar contato</span><span aria-hidden="true">↗</span></button></nav>
+</div></header>
+<main id="conteudo">
+<section id="inicio" class="hero hero-photo wrap" aria-labelledby="heroTitle">
+<div class="hero-copy"><p class="eyebrow">Seu cuidado começa com você</p><h1 id="heroTitle">Mais leveza.<br>Mais cuidado.<br><em>Mais você.</em></h1><p class="lead">Estética facial, cuidados com o corpo e bem-estar. Conheça as possibilidades e converse sobre o que faz sentido para você.</p><div class="actions"><button class="btn" type="button" data-contact><span data-contact-label>Preparar contato</span><span aria-hidden="true">↗</span></button><a class="text-link" href="#cuidados">Explorar os cuidados <span aria-hidden="true">↓</span></a></div><a class="hero-reputation" href="#avaliacoes" aria-label="Ver avaliações da clínica: nota 5,0 em 43 avaliações, registrada em 15 de outubro de 2026"><span aria-hidden="true">★★★★★</span><b>5,0</b><span>43 avaliações no Google ↗</span></a></div>
+<figure class="hero-visual"><div class="portrait hero-background" role="img" aria-label="Daniele Lucena sentada à mesa, sorrindo, com blazer branco"><img id="heroPhoto" src="assets/images/daniele-hero-v2.png" alt="" width="1536" height="1024" fetchpriority="high" decoding="async"></div><figcaption><strong>Daniele Lucena</strong><span>Um olhar atento. Um cuidado próximo.</span></figcaption></figure>
 </section>
-<section id="essencia" class="about">
-<div>
-<p class="eyebrow">A essência do cuidado</p>
-<h2>Você é o ponto<br>de <em>partida.</em>
-</h2>
-<p>Antes de escolher um procedimento, vale entender seus objetivos. A proposta é abrir espaço para suas dúvidas e construir o próximo passo com orientação.</p>
-<a class="text-btn" href="#duvidas">Tire suas primeiras dúvidas</a>
-</div>
-<ol class="steps">
-<li>
-<b>01</b>
-<div>
-<strong>Conte o que você busca</strong>
-<p>Compartilhe seu interesse e o que gostaria de cuidar.</p>
-</div>
-</li>
-<li>
-<b>02</b>
-<div>
-<strong>Entenda as possibilidades</strong>
-<p>Converse sobre avaliação, disponibilidade e dúvidas.</p>
-</div>
-</li>
-<li>
-<b>03</b>
-<div>
-<strong>Decida com tranquilidade</strong>
-<p>O plano de cuidado é definido após avaliação individual.</p>
-</div>
-</li>
-</ol>
+<div class="wrap"><div class="values"><span>✧ &nbsp; Escuta e acolhimento</span><span>✧ &nbsp; Cuidado individualizado</span><span>✧ &nbsp; Respeito à sua essência</span></div></div>
+<section id="cuidados" class="wrap section care-section" aria-labelledby="careTitle">
+  <div class="section-heading care-heading reveal">
+    <div><p class="eyebrow">Encontre seu cuidado</p><h2 id="careTitle">O que você quer<br><em>cuidar hoje?</em></h2></div>
+    <div class="care-intro"><p>Explore as áreas e reúna seus interesses em uma única conversa.</p><a href="#seu-cuidado" class="care-help">Precisa de orientação? <span aria-hidden="true">↗</span></a></div>
+  </div>
+  <div class="care-toolbar reveal">
+    <div class="filters" role="group" aria-label="Filtrar áreas de cuidado">
+      <button type="button" data-filter="all" aria-pressed="true">Todos os cuidados</button>
+      <button type="button" data-filter="facial" aria-pressed="false">Rosto</button>
+      <button type="button" data-filter="corporal" aria-pressed="false">Corpo</button>
+      <button type="button" data-filter="bemestar" aria-pressed="false">Bem-estar</button>
+    </div><span class="care-result-count" id="careResultCount" aria-hidden="true">03 áreas para explorar</span>
+  </div>
+  <p class="sr-only" id="filterStatus" role="status">3 áreas disponíveis.</p>
+  <div class="cards care-grid">
+    <article class="card care-card reveal" data-category="facial">
+      <div class="card-pic care-photo">
+        <img class="care-image" src="assets/images/cuidado-facial-v3.png" alt="Imagem ilustrativa de cuidado facial com avaliação suave da pele" width="1536" height="1024" loading="lazy" decoding="async">
+        <span class="care-category">01 <i aria-hidden="true"></i> Rosto</span>
+        <button type="button" class="care-zoom" data-care-zoom="facial" aria-label="Ampliar imagem ilustrativa de estética facial"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"/></svg></button>
+        <span class="care-photo-caption" aria-hidden="true">Um olhar para a sua pele.</span>
+      </div>
+      <div class="card-body"><p class="care-overline">Sua pele, sua essência</p><h3>Estética facial</h3><p>Conheça as possibilidades de cuidado para a pele e os traços do seu rosto.</p><span class="care-tag">Pele e rosto</span>
+        <div class="care-actions"><button type="button" class="card-link" data-service="facial" aria-label="Conhecer estética facial">Ver detalhes <span aria-hidden="true">↗</span></button><button type="button" class="care-select" data-care-select="facial" aria-pressed="false" aria-label="Adicionar estética facial aos interesses"><span class="care-select-icon" aria-hidden="true">+</span><span class="care-select-label">Tenho interesse</span></button></div>
+      </div>
+    </article>
+    <article class="card care-card reveal" data-category="corporal">
+      <div class="card-pic care-photo">
+        <img class="care-image" src="assets/images/cuidado-corporal-v3.png" alt="Imagem ilustrativa de aplicador de terapia não invasiva sobre toalhas claras" width="1536" height="1024" loading="lazy" decoding="async">
+        <span class="care-category">02 <i aria-hidden="true"></i> Corpo</span>
+        <button type="button" class="care-zoom" data-care-zoom="corporal" aria-label="Ampliar imagem ilustrativa de dermatofuncional"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"/></svg></button>
+        <span class="care-photo-caption" aria-hidden="true">Atenção a cada cuidado.</span>
+      </div>
+      <div class="card-body"><p class="care-overline">Cuidado em cada detalhe</p><h3>Dermatofuncional</h3><p>Converse sobre os cuidados com a pele e o corpo a partir de uma avaliação individual.</p><span class="care-tag">Pele e corpo</span>
+        <div class="care-actions"><button type="button" class="card-link" data-service="corporal" aria-label="Conhecer dermatofuncional">Ver detalhes <span aria-hidden="true">↗</span></button><button type="button" class="care-select" data-care-select="corporal" aria-pressed="false" aria-label="Adicionar dermatofuncional aos interesses"><span class="care-select-icon" aria-hidden="true">+</span><span class="care-select-label">Tenho interesse</span></button></div>
+      </div>
+    </article>
+    <article class="card care-card reveal" data-category="bemestar">
+      <div class="card-pic care-photo">
+        <img class="care-image" src="assets/images/cuidado-bemestar-v3.png" alt="Imagem ilustrativa de água, infusão e alimentos frescos em tons naturais" width="1536" height="1024" loading="lazy" decoding="async">
+        <span class="care-category">03 <i aria-hidden="true"></i> Bem-estar</span>
+        <button type="button" class="care-zoom" data-care-zoom="bemestar" aria-label="Ampliar imagem ilustrativa de bem-estar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"/></svg></button>
+        <span class="care-photo-caption" aria-hidden="true">Mais espaço para você.</span>
+      </div>
+      <div class="card-body"><p class="care-overline">Um olhar para o conjunto</p><h3>Saúde integrativa</h3><p>Comece uma conversa sobre bem-estar, rotina e uma visão integrada do cuidado.</p><span class="care-tag">Rotina e bem-estar</span>
+        <div class="care-actions"><button type="button" class="card-link" data-service="bemestar" aria-label="Conhecer saúde integrativa">Ver detalhes <span aria-hidden="true">↗</span></button><button type="button" class="care-select" data-care-select="bemestar" aria-pressed="false" aria-label="Adicionar saúde integrativa aos interesses"><span class="care-select-icon" aria-hidden="true">+</span><span class="care-select-label">Tenho interesse</span></button></div>
+      </div>
+    </article>
+  </div>
+  <div class="care-selection" id="careSelection" hidden>
+    <div class="care-selection-copy"><span class="care-selection-eyebrow">Sua conversa começa aqui</span><h3 id="careSelectionTitle">Seus interesses</h3><ul id="careSelectedList" class="care-selected-list" aria-label="Cuidados selecionados"></ul></div>
+    <div class="care-selection-actions"><button class="btn cream" type="button" id="careSelectionContact" data-contact>Conversar sobre os selecionados <span aria-hidden="true">↗</span></button><button class="care-clear" id="clearCareSelection" type="button">Limpar seleção</button></div>
+  </div>
+  <p id="careSelectionStatus" class="sr-only" role="status"></p>
+  <div class="care-footnote"><span aria-hidden="true">✧</span><p>Escolha um ou mais interesses. A indicação de cuidados depende de avaliação individual.</p></div>
+  <p class="image-note">Imagens ilustrativas. Os cuidados, equipamentos e profissionais disponíveis devem ser confirmados com a clínica.</p>
 </section>
-<section id="duvidas" class="faq">
-<div>
-<p class="eyebrow">Antes do primeiro contato</p>
-<h2>Simples de entender.<br>
-<em>Fácil de começar.</em>
-</h2>
-</div>
-<div>
-<details>
-<summary>Preciso saber qual procedimento quero?</summary>
-<p>Não. Você pode começar contando o que busca e esclarecer as opções durante uma avaliação.</p>
-</details>
-<details>
-<summary>Como consultar valores e horários?</summary>
-<p>Entre em contato com a clínica para confirmar valores, profissionais e horários disponíveis para o cuidado desejado.</p>
-</details>
-<details>
-<summary>Posso falar sobre mais de um cuidado?</summary>
-<p>Sim. Inclua seus interesses na mensagem para que a clínica possa orientar o primeiro atendimento.</p>
-</details>
-<details>
-<summary>O atendimento é igual para todas as pessoas?</summary>
-<p>As necessidades e a indicação de procedimentos dependem de avaliação individual. Resultados e planos de cuidado podem variar.</p>
-</details>
-</div>
+<section id="seu-cuidado" class="finder" aria-labelledby="finderTitle"><div class="wrap finder-grid">
+<div class="reveal"><p class="eyebrow">Um começo mais simples</p><h2 id="finderTitle">Seu cuidado.<br><em>Do seu jeito.</em></h2><p>Não precisa chegar com todas as respostas. Escolha um interesse e prepare sua conversa em dois passos.</p><span class="flower" aria-hidden="true">✳</span></div>
+<form id="interestForm" class="finder-panel reveal"><div class="step-label"><span id="stepLabel">Passo 01 de 02</span><span aria-hidden="true">↗</span></div><div class="progress" aria-hidden="true"><span class="active"></span><span></span></div>
+<fieldset id="stepOne"><legend>O que você deseja cuidar?</legend><div class="choices"><label><input type="radio" name="interest" value="Estética facial"><span>Pele e rosto</span></label><label><input type="radio" name="interest" value="Dermatofuncional"><span>Corpo</span></label><label><input type="radio" name="interest" value="Saúde integrativa"><span>Bem-estar</span></label><label><input type="radio" name="interest" value="Uma primeira orientação"><span>Preciso de orientação</span></label></div><button class="btn full" id="nextStep" type="button" disabled>Continuar <span aria-hidden="true">→</span></button></fieldset>
+<fieldset id="stepTwo" hidden><legend id="goalLegend" tabindex="-1">Como podemos começar?</legend><p id="chosenInterest" class="selection-note"></p><div class="choices stacked"><label><input type="radio" name="goal" value="Conhecer as possibilidades"><span>Conhecer as possibilidades</span></label><label><input type="radio" name="goal" value="Consultar avaliação e horários"><span>Consultar avaliação e horários</span></label></div><div class="finder-actions"><button id="backStep" class="text-button" type="button">← Voltar</button><button class="btn" id="finishFinder" type="submit" disabled>Preparar mensagem ↗</button></div></fieldset>
+<p class="fine-print">Este guia organiza seu interesse. A indicação de cuidados depende de avaliação profissional.</p></form></div></section>
+<section id="essencia" class="wrap section about" aria-labelledby="aboutTitle"><div class="essence-card reveal"><p class="eyebrow">A essência Daniele Lucena</p><p class="essence-quote">Um olhar atento.<br>Um cuidado<br><em>próximo.</em></p><span class="signature">Daniele Lucena</span><span class="essence-symbol" aria-hidden="true">✧</span></div><div class="about-copy reveal"><p class="eyebrow">Antes de qualquer escolha</p><h2 id="aboutTitle">Você é o nosso<br>ponto de <em>partida.</em></h2><p id="ownerBio">Antes de escolher um procedimento, vale entender seus objetivos. A proposta é abrir espaço para suas dúvidas e construir o próximo passo com orientação.</p><p>Conheça as áreas de cuidado, compartilhe o que você busca e esclareça suas dúvidas antes de decidir.</p><a href="#como-funciona" class="text-link">Entenda o primeiro contato ↗</a></div></section>
+<section id="como-funciona" class="wrap section journey" aria-labelledby="journeyTitle"><div class="section-heading reveal"><div><p class="eyebrow">Sem complicar</p><h2 id="journeyTitle">Um passo de cada vez.<br><em>No seu tempo.</em></h2></div><p>Da primeira dúvida à avaliação, o começo pode ser simples.</p></div><ol><li class="reveal"><span>01</span><h3>Conte o que busca</h3><p>Escolha uma área ou peça uma primeira orientação.</p></li><li class="reveal"><span>02</span><h3>Converse com a clínica</h3><p>Confirme os cuidados disponíveis, valores e horários.</p></li><li class="reveal"><span>03</span><h3>Defina o próximo passo</h3><p>A indicação e o plano de cuidado dependem de avaliação individual.</p></li></ol></section>
+<section id="galeria" class="wrap section clinic-gallery" aria-labelledby="galleryTitle" hidden>
+  <div class="section-heading gallery-heading"><div><p class="eyebrow">Conheça de perto</p><h2 id="galleryTitle">Entre, conheça<br>e sinta-se <em>à vontade.</em></h2></div><div class="gallery-intro"><p>Do espaço aos detalhes: um pouco da clínica, da rotina e de quem cuida de você.</p><span id="galleryMediaCount" class="gallery-count">03 registros para explorar</span></div></div>
+  <div class="gallery-grid gallery-mosaic" id="galleryGrid" aria-label="Galeria da clínica"></div>
+  <div class="gallery-guidance"><span aria-hidden="true">↗</span><p>Toque nas imagens para ampliar. Navegue pelas setas ou deslize no celular.</p></div>
+  <div class="gallery-contact"><div><span class="eyebrow">Vamos conversar?</span><h3>Seu próximo passo pode começar aqui.</h3></div><button type="button" class="btn" data-contact>Conhecer o atendimento <span aria-hidden="true">↗</span></button></div>
 </section>
-<div class="contact">
-<div>
-<h2>Um tempo para <em style="color:#d5bd8e">cuidar de você.</em>
-</h2>
-<p>Comece com uma conversa. Tire suas dúvidas e conheça o próximo passo.</p>
-</div>
-<button class="btn" data-contact>Quero conversar com a clínica</button>
-</div>
+<section id="avaliacoes" class="wrap section reviews-section" aria-labelledby="reviewTitle" hidden>
+  <div class="section-heading reveal"><div><p class="eyebrow">Confiança que vem de quem conhece</p><h2 id="reviewTitle">Cuidado que também<br>se traduz em <em>palavras.</em></h2></div><p>Conheça algumas experiências compartilhadas por quem passou pela clínica.</p></div>
+  <div class="reviews-layout">
+    <aside class="rating-panel reveal" aria-label="Avaliação geral da clínica no Google">
+      <span class="rating-platform">Avaliações no Google</span><div class="rating-value"><strong>5,0</strong><span>/ 5</span></div><div class="rating-stars" role="img" aria-label="5 de 5 estrelas">★★★★★</div><p class="rating-total">Com base em <strong>43 avaliações</strong></p><span class="rating-divider" aria-hidden="true"></span><p>Um espaço para ouvir, acolher e cuidar.</p><a id="googleReviewsLink" class="btn full" target="_blank" rel="noopener noreferrer">Ver todas no Google ↗</a><a id="googleWriteReview" class="rating-write" target="_blank" rel="noopener noreferrer">Conte sua experiência <span aria-hidden="true">↗</span></a><small>Nota e quantidade registradas em 15/10/2026. Consulte os dados atuais no Google.</small>
+    </aside>
+    <div class="reviews-content reveal"><div class="review-filters" role="group" aria-label="Filtrar depoimentos por tema"><button type="button" data-review-filter="all" aria-pressed="true">Todas</button><button type="button" data-review-filter="acolhimento" aria-pressed="false">Acolhimento</button><button type="button" data-review-filter="atendimento" aria-pressed="false">Atendimento</button><button type="button" data-review-filter="ambiente" aria-pressed="false">Ambiente</button></div><div class="reviews-track" id="reviewsTrack" tabindex="0" aria-label="Depoimentos da clínica"></div><div class="reviews-bottom"><p id="reviewsVisibleCount">8 depoimentos selecionados</p><div class="slider-controls"><button class="icon-button" id="previousReview" type="button" aria-label="Depoimento anterior">←</button><button class="icon-button" id="nextReview" type="button" aria-label="Próximo depoimento">→</button></div></div><p id="reviewStatus" class="sr-only" role="status"></p><p class="reviews-note">Trechos e relatos selecionados de avaliações do Google.</p></div>
+  </div>
+  <div class="review-invite"><div><h3>Já conhece a clínica?</h3><p>Sua opinião ajuda outras pessoas a conhecerem nosso atendimento.</p></div><a id="googleReviewInvite" class="btn" target="_blank" rel="noopener noreferrer">Avaliar no Google <span aria-hidden="true">↗</span></a></div>
+</section>
+<section id="duvidas" class="wrap section faq" aria-labelledby="faqTitle"><div class="reveal"><p class="eyebrow">Antes do primeiro contato</p><h2 id="faqTitle">Suas dúvidas<br>merecem <em>atenção.</em></h2><p>Algumas respostas para começar com mais tranquilidade.</p><button class="text-button text-link" type="button" data-contact>Tenho outra dúvida ↗</button></div><div class="faq-list reveal">
+<details><summary>Preciso saber qual procedimento quero?<span aria-hidden="true">+</span></summary><p>Não. Você pode começar contando o que busca e esclarecer as possibilidades durante uma avaliação.</p></details><details><summary>Como consultar valores e horários?<span aria-hidden="true">+</span></summary><p>Converse com a clínica para confirmar valores, profissionais e horários disponíveis para o cuidado desejado.</p></details><details><summary>Posso falar sobre mais de um cuidado?<span aria-hidden="true">+</span></summary><p>Sim. Você pode editar a mensagem de contato e incluir os interesses sobre os quais gostaria de conversar.</p></details><details><summary>O cuidado é igual para todas as pessoas?<span aria-hidden="true">+</span></summary><p>As necessidades e a indicação de procedimentos dependem de avaliação individual. Planos e resultados podem variar.</p></details></div></section>
+<section id="localizacao" class="wrap section location-section" aria-labelledby="locationTitle">
+  <div class="section-heading reveal"><div><p class="eyebrow">Esperamos por você</p><h2 id="locationTitle">Seu cuidado tem<br><em>endereço.</em></h2></div><p>Estamos no City América, em São Paulo. Confira os horários e planeje sua visita.</p></div>
+  <div class="location-layout">
+    <div class="location-info reveal"><span class="location-label">Clínica de Especialidade Daniele Lucena</span><h3>City América<span>São Paulo · SP</span></h3><address id="locationAddress">Av. do Anastácio, 1499a<br>City América, São Paulo - SP<br>CEP 05119-000</address><div class="address-actions"><button id="copyClinicAddress" class="text-button" type="button">Copiar endereço <span aria-hidden="true">↗</span></button><a id="locationProfileLink" class="text-link" target="_blank" rel="noopener noreferrer">Abrir no Maps ↗</a></div><p class="copy-address-status" id="copyAddressStatus" role="status"></p><input id="addressCopyFallback" type="text" readonly aria-label="Endereço para copiar" hidden>
+      <div class="location-contact"><div><span>Fale com a clínica</span><a href="tel:+5511995064088" id="clinicPhoneLink">(11) 99506-4088</a></div><button type="button" class="btn small" data-contact>WhatsApp ↗</button></div>
+      <details class="opening-hours"><summary><span>Horários de atendimento<small id="todayHours">Segunda a sexta · 08h–20h</small></span><span aria-hidden="true">+</span></summary><table><caption class="sr-only">Horários de funcionamento da clínica, no fuso de São Paulo</caption><tbody><tr data-weekday="1"><th scope="row">Segunda-feira</th><td>08h–20h</td></tr><tr data-weekday="2"><th scope="row">Terça-feira</th><td>08h–20h</td></tr><tr data-weekday="3"><th scope="row">Quarta-feira</th><td>08h–20h</td></tr><tr data-weekday="4"><th scope="row">Quinta-feira</th><td>08h–20h</td></tr><tr data-weekday="5"><th scope="row">Sexta-feira</th><td>08h–20h</td></tr><tr data-weekday="6"><th scope="row">Sábado</th><td>Fechado</td></tr><tr data-weekday="0"><th scope="row">Domingo</th><td>Fechado</td></tr></tbody></table><p>Confirme a disponibilidade para atendimento e eventuais alterações em feriados.</p></details>
+    </div>
+    <div class="location-map-card reveal"><div class="map-container" id="clinicMapContainer"><div class="map-placeholder" id="mapPlaceholder"><span class="map-pin" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg></span><span class="eyebrow">Av. do Anastácio, 1499a</span><h3>Vamos traçar<br>o seu <em>caminho?</em></h3><p>Explore a localização no Google Maps.</p><button class="btn cream" id="loadClinicMap" type="button">Carregar mapa <span aria-hidden="true">↗</span></button><a id="mapFallbackLink" target="_blank" rel="noopener noreferrer">Abrir em outra aba ↗</a></div></div><div class="route-options"><div><span class="location-label">Como você vem?</span><p>Escolha sua rota no Google Maps.</p></div><div class="route-links"><a id="driveRoute" target="_blank" rel="noopener noreferrer">Carro ↗</a><a id="transitRoute" target="_blank" rel="noopener noreferrer">Transporte público ↗</a><a id="walkRoute" target="_blank" rel="noopener noreferrer">A pé ↗</a></div></div></div>
+  </div>
+</section>
+<section id="contato" class="wrap contact-section" aria-labelledby="contactTitle"><div class="contact-card reveal"><div><p class="eyebrow">O próximo passo é seu</p><h2 id="contactTitle">Um tempo para<br><em>cuidar de você.</em></h2><p>Comece com uma conversa. Tire suas dúvidas e conheça as possibilidades.</p></div><div class="contact-actions"><button class="btn cream" type="button" data-contact><span data-contact-label>Preparar contato</span><span aria-hidden="true">↗</span></button><small>Confirme sua avaliação diretamente com a clínica.</small></div></div><div id="contactDetails" class="contact-details profile-legacy-details" hidden><div id="addressBlock" hidden><small>Onde estamos</small><p id="addressText"></p><a id="mapsLink" class="text-link" target="_blank" rel="noopener noreferrer" hidden>Como chegar ↗</a></div><div id="hoursBlock" hidden><small>Atendimento</small><p id="hoursText"></p></div><a id="instagramLink" class="text-link" target="_blank" rel="noopener noreferrer" hidden>Conheça nosso Instagram ↗</a></div></section>
 </main>
-<footer>
-<div class="wrap footer-inner">
-<a class="brand" href="#inicio">Daniele Lucena<small>Saúde estética & bem-estar</small>
-</a>
-<p>POC para aprovação visual. Imagens das referências enviadas; conteúdo e serviços sujeitos à validação da clínica. Contato demonstrativo, sem envio ou agendamento real.</p>
-</div>
-</footer>
-<div class="mobile-cta">
-<button class="btn" data-contact>Conversar sobre meu cuidado</button>
-</div>
-<dialog id="contactDialog">
-<button class="close" aria-label="Fechar">×</button>
-<p class="eyebrow">Seu primeiro passo</p>
-<h2>Vamos começar<br>uma conversa?</h2>
-<p>Prepare sua mensagem. Nesta POC, o envio fica disponível após a inclusão do WhatsApp oficial da clínica.</p>
-<label for="subject">Sobre o que você quer conversar?</label>
-<select id="subject">
-<option>Uma primeira orientação</option>
-<option>Estética facial</option>
-<option>Dermatofuncional</option>
-<option>Saúde integrativa</option>
-<option>Pele e rosto</option>
-<option>Cuidados corporais</option>
-<option>Bem-estar</option>
-</select>
-<label for="message">Sua mensagem — você pode editar</label>
-<textarea id="message">
-</textarea>
-<button class="btn" id="copy">Copiar minha mensagem</button>
-<p class="status" id="copyStatus" role="status">
-</p>
-</dialog>
-<script src="js/main.js">
-</script>
-</body>
-</html>
+<footer><div class="wrap footer-grid"><a class="brand" href="#inicio"><span>Daniele Lucena<small>Saúde estética & bem-estar</small></span></a><p>Cuidado individualizado. A disponibilidade e a indicação dos serviços devem ser confirmadas com a clínica.</p><a class="icon-button" href="#inicio" aria-label="Voltar ao início">↑</a></div><div class="wrap footer-bottom"><span>© <span id="year">2026</span> Daniele Lucena</span><span id="previewNote">Prévia em desenvolvimento · informações em validação.</span></div></footer>
+<div class="mobile-cta"><button class="btn full" type="button" data-contact><span data-contact-label>Preparar contato</span><span aria-hidden="true">↗</span></button></div>
+<dialog id="serviceDialog" aria-labelledby="serviceTitle" aria-describedby="serviceDescription"><button class="close" type="button" data-close aria-label="Fechar detalhes">×</button><p class="eyebrow" id="serviceEyebrow">Conheça o cuidado</p><h2 id="serviceTitle"></h2><p id="serviceDescription"></p><h3 class="dialog-subtitle">Você pode conversar sobre</h3><ul id="serviceTopics" class="detail-list"></ul><p class="dialog-note">A disponibilidade dos cuidados e sua indicação dependem de confirmação com a clínica e avaliação individual.</p><button class="btn full" type="button" id="serviceContact">Conversar sobre este cuidado ↗</button></dialog>
+<dialog id="contactDialog" aria-labelledby="contactDialogTitle" aria-describedby="contactIntro"><button class="close" type="button" data-close aria-label="Fechar contato">×</button><p class="eyebrow">Seu primeiro passo</p><h2 id="contactDialogTitle">Vamos começar<br><em>uma conversa?</em></h2><p id="contactIntro"></p><label for="subject">Sobre o que você quer conversar?</label><select id="subject"><option>Uma primeira orientação</option><option>Estética facial</option><option>Dermatofuncional</option><option>Saúde integrativa</option></select><label for="message">Sua mensagem <small>Você pode editar</small></label><textarea id="message" rows="5" maxlength="1500"></textarea><a class="btn full" id="whatsappLink" target="_blank" rel="noopener noreferrer" hidden>Continuar no WhatsApp ↗</a><button class="btn full" id="copyMessage" type="button">Copiar minha mensagem</button><p class="status" id="contactStatus" role="status"></p></dialog>
+<dialog id="galleryDialog" class="gallery-dialog clinic-gallery-dialog" aria-labelledby="galleryDialogTitle" aria-describedby="galleryCaption"><button class="close" type="button" data-close aria-label="Fechar galeria">×</button><div class="gallery-dialog-heading"><span class="eyebrow" id="galleryDialogCategory">De perto</span><h2 id="galleryDialogTitle"></h2></div><div class="gallery-stage" id="galleryStage"><img id="galleryImage" alt=""><video id="galleryVideo" controls playsinline preload="none" hidden></video></div><div class="gallery-footer"><button class="icon-button" id="previousPhoto" type="button" aria-label="Registro anterior">←</button><div><p id="galleryCaption" aria-live="polite"></p><p class="gallery-keyboard-note">Use as setas do teclado ou deslize para navegar.</p></div><button class="icon-button" id="nextPhoto" type="button" aria-label="Próximo registro">→</button></div><div class="gallery-thumbs" id="galleryThumbnails" role="group" aria-label="Escolher registro"></div><p class="gallery-load-status" id="galleryLoadStatus" role="status"></p></dialog>
+<dialog id="carePhotoDialog" class="care-photo-dialog" aria-labelledby="carePhotoTitle"><button class="close" type="button" data-close aria-label="Fechar imagem ampliada">×</button><img id="carePhotoFull" alt=""><div class="care-photo-dialog-caption"><h2 id="carePhotoTitle"></h2><p>Imagem ilustrativa da área de cuidado.</p></div></dialog>
+<noscript><p class="noscript-note">Ative o JavaScript para usar os filtros e preparar sua mensagem. As áreas e dúvidas continuam disponíveis nesta página.</p></noscript>
+</body></html>

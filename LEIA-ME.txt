@@ -1,0 +1,16 @@
+ATUALIZAÇÃO DA LANDING PAGE DANIELE LUCENA
+
+1. Faça uma cópia da pasta atual do seu projeto.
+2. Copie o index.html deste pacote para a raiz do projeto, substituindo o anterior.
+3. Mescle as pastas css, js e assets com as pastas existentes.
+4. Mantenha todos os demais arquivos do projeto. Este pacote é uma atualização, não o projeto completo.
+5. Abra pelo Live Server no VS Code e atualize com Ctrl+F5.
+
+Incluído: links Instagram/LinkedIn, carreira e formação no rodapé, horários no menu superior, imagem suave no quadro verde e novo layout do mapa.
+
+Horários preservados do HTML enviado: segunda a sexta, 08h–20h; sábado e domingo, fechado. Os IDs foram mantidos para os scripts existentes.
+
+Verificação: estrutura do HTML, IDs, links, caminhos dos arquivos novos e sintaxe JavaScript. Navegador de teste indisponível; interações não foram executadas em navegador. A validação visual completa depende dos CSS, JS e imagens anteriores, que não vieram no arquivo enviado.
+
+ARQUIVOS RECUPERADOS DOS ANEXOS
+css/styles.css, css/care-v3.css, css/profile-v4.css e js/main.js foram recuperados das colagens e tiveram os escapes de Markdown removidos. Os demais arquivos existentes devem ser preservados. O menu de horários acompanha o breakpoint de 860px do menu original.

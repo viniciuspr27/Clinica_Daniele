@@ -1,0 +1,67 @@
+/* Refinamentos sobre o projeto v5. Carregar após os estilos existentes. */
+header{z-index:60}
+#navigation{gap:clamp(10px,1.4vw,22px)}
+#navigation .header-hours{position:relative;margin:0;padding:0;border:0;flex-shrink:0;color:var(--ink,#30392a)}
+.header-hours>summary{display:flex;align-items:center;gap:10px;min-height:46px;padding:8px 12px;border:1px solid #d8dccd;border-radius:9px;cursor:pointer;list-style:none;font-size:12px;background:#eeefe6}
+.header-hours>summary::-webkit-details-marker{display:none}
+.header-hours>summary::after{display:none}
+.header-hours>summary>span:first-child{display:grid;gap:3px;text-align:left}
+.header-hours #todayHours{display:block;font-size:10px;color:#59624e;font-weight:400;white-space:nowrap}
+.header-hours[open]>summary{background:#e5e8dc}
+.header-hours .hours-panel{position:absolute;right:0;top:calc(100% + 12px);width:320px;max-width:calc(100vw - 32px);padding:24px;background:#fffef9;color:#30392a;border:1px solid #daddcf;border-radius:16px;box-shadow:0 20px 50px #23301d24;z-index:65}
+.hours-panel table{width:100%;border-collapse:collapse;font-size:13px}
+.hours-panel th{text-align:left;font-weight:400}
+.hours-panel td{text-align:right}
+.hours-panel td,.hours-panel th{padding:9px 0;border-bottom:1px solid #e9eadf}
+.hours-panel tr.is-today{color:#414e32;font-weight:700;background:#f0f2e9}
+.hours-panel p{font-size:11px;line-height:1.6;color:#65705d;margin:15px 0 0}
+.essence-depth{position:relative;isolation:isolate;overflow:hidden;background:#e9ecdf!important;min-height:350px;border:1px solid #d9dece;border-radius:18px 90px 18px 18px;box-shadow:0 20px 42px -32px #303d28}
+.essence-depth .essence-reference{position:absolute;inset:0 0 0 auto;width:68%;height:100%;object-fit:cover;object-position:center 35%;opacity:.28;filter:saturate(.45);z-index:-3;pointer-events:none;transform:scale(1.04)}
+.essence-depth:before{content:"";position:absolute;inset:0;z-index:-2;background:linear-gradient(90deg,#e9ecdf 8%,#e9ecdfed 35%,#e9ecdf18 100%),linear-gradient(0deg,#e9ecdfb3,transparent 35%);pointer-events:none}
+.essence-depth:after{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;box-shadow:inset 1px 1px 0 #ffffffa6,inset -16px -10px 28px #5765440a;pointer-events:none}
+.essence-depth .eyebrow,.essence-depth .essence-quote,.essence-depth .signature{position:relative;z-index:1}
+.essence-depth .essence-quote{max-width:88%;color:#34432c;text-shadow:0 1px 10px #e9ecdf}
+.location-map-v6{overflow:hidden;border:1px solid #d9ddcf;border-radius:24px;background:#fffdf7;box-shadow:0 18px 50px -35px #29341e70}
+.location-map-v6 .map-container{min-height:390px;position:relative;background:#e8eddf}
+.location-map-v6 .map-placeholder{position:relative;isolation:isolate;overflow:hidden;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;min-height:390px;padding:38px;color:#f9f6ed;background:linear-gradient(115deg,#35452bf5,#4d603cdb);text-align:left}
+.location-map-v6 .map-placeholder:before{content:"";position:absolute;inset:-30%;z-index:-1;transform:rotate(-24deg);background:repeating-linear-gradient(90deg,transparent 0 75px,#ffffff10 76px 78px,transparent 79px 150px),repeating-linear-gradient(0deg,transparent 0 60px,#ffffff0c 61px 64px,transparent 65px 125px);pointer-events:none}
+.location-map-v6 .map-placeholder:after{content:"";position:absolute;right:-50px;top:30px;width:240px;height:240px;border:1px solid #dedfc729;border-radius:50%;box-shadow:0 0 0 35px #e7e8cc09,0 0 0 70px #e7e8cc06;z-index:-1;pointer-events:none}
+.location-map-v6 .map-pin{display:grid;place-items:center;width:48px;height:48px;border:1px solid #d3ddbe66;border-radius:50%;margin-bottom:20px;color:#dac79c}
+.location-map-v6 .map-pin svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.5}
+.location-map-v6 .eyebrow{color:#e0cd9f;font-size:10px;letter-spacing:2px}
+.location-map-v6 h3{font-family:Georgia,serif;font-weight:400;font-size:clamp(30px,3vw,42px);line-height:1.1;margin:0 0 16px;color:#fffaf0}
+.location-map-v6 h3 em{color:#dfc894}
+.location-map-v6 .map-placeholder p{max-width:330px;font-size:13px;line-height:1.7;color:#e1e7d7;margin:0 0 22px}
+.location-map-v6 #mapFallbackLink{font-size:12px;margin-top:14px;color:#f5f1e5;text-decoration:underline;text-underline-offset:4px}
+.location-map-v6 .route-options{padding:24px;display:flex;gap:18px;align-items:center;justify-content:space-between;flex-wrap:wrap;background:#f2f3e9}
+.location-map-v6 .route-options p{font-size:12px;color:#647057;margin:6px 0 0}
+.location-map-v6 .route-links{display:flex;flex-wrap:wrap;gap:8px}
+.location-map-v6 .route-links a{display:inline-flex;padding:10px 13px;border:1px solid #cdd5bf;border-radius:24px;font-size:12px;color:#3c4c30;background:#fffef8}
+.location-map-v6 iframe{display:block;width:100%;height:390px;border:0}
+.career-footer{position:relative;display:grid;grid-template-columns:1.1fr 1fr;gap:70px;padding-top:50px;padding-bottom:42px;color:#35402c}
+.career-footer .brand{display:inline-block;font-family:Georgia,serif;font-size:30px;font-weight:400}
+.career-footer .brand small{display:block;font:9px/1.7 Arial,sans-serif;letter-spacing:1.4px;text-transform:uppercase;margin-top:12px}
+.career-footer .eyebrow{font-size:10px;letter-spacing:1.6px;margin-bottom:18px}
+.career-bio{font-size:14px;line-height:1.85;margin:24px 0 20px;max-width:450px;color:#626b59}
+.career-role{font-size:13px;line-height:1.8;color:#626b59}
+.career-role strong{color:#35402c}.career-role span{font-size:12px}
+.social-links{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+.social-links a{display:inline-flex;align-items:center;gap:9px;padding:11px 16px;border:1px solid #cfd5c3;border-radius:7px;font:12px Arial,sans-serif;color:#35452b;background:#f1f2e8;transition:background .2s}
+.social-links a:hover{background:#e3e8d8}.linkedin-mark{font-weight:700;border:1px solid currentColor;padding:1px 2px;font-size:10px}
+.career-education ol{padding:0;margin:0;list-style:none;display:grid;gap:22px}
+.career-education li{position:relative;border-left:2px solid #cfd7bf;padding:0 0 4px 22px}
+.career-education h3{font:23px/1.3 Georgia,serif;margin:8px 0;color:#35452b}
+.career-education p{font-size:12px;line-height:1.7;margin:6px 0;color:#626b59}
+.career-education strong{font-size:13px;font-weight:500}.career-education small{display:block;font-size:11px;color:#707962;margin-top:8px}
+.education-period{font-size:10px;letter-spacing:1.4px;color:#99723f}
+.career-footer .footer-top{position:absolute;right:24px;top:24px}
+footer .footer-bottom{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;border-top:1px solid #dddcd1;padding-top:22px;padding-bottom:22px;font-size:10px;color:#68715f}
+footer .footer-bottom p{max-width:390px;margin:0;font-size:11px;line-height:1.7}
+@media(max-width:1100px){header .nav{gap:12px}#navigation{gap:10px;font-size:11px}#navigation .btn{padding-left:12px;padding-right:12px}.header-hours>summary{padding:7px 9px;font-size:11px}.header-hours #todayHours{font-size:9px}}
+@media(max-width:900px){.career-footer{gap:32px}.career-footer .footer-top{right:20px}.header-hours .hours-panel{right:0}}
+@media(max-width:860px){#navigation .header-hours{width:100%}.header-hours>summary{width:100%;justify-content:space-between;padding:12px;font-size:13px}.header-hours #todayHours{font-size:11px}.header-hours .hours-panel{position:static;width:100%;max-width:none;margin-top:8px;padding:18px;box-shadow:none}.essence-depth{min-height:330px}.essence-depth .essence-reference{width:75%}.location-map-v6 .map-placeholder{padding:28px;min-height:360px}.career-footer{grid-template-columns:1fr;gap:36px;padding-top:38px}.career-intro{padding-right:20px}.career-footer .brand{font-size:28px}.career-bio{font-size:13px}.career-education{padding-top:28px;border-top:1px solid #daddcf}.career-footer .footer-top{top:20px;right:15px}footer .footer-bottom{display:grid;gap:12px}.location-map-v6 .route-options{padding:20px}}
+@media(prefers-reduced-motion:reduce){.social-links a{transition:none}}
+
+@media(max-width:860px){#navigation{max-height:calc(100dvh - 78px);overflow-y:auto;overscroll-behavior:contain}.header-hours .hours-panel{position:static;width:100%;max-width:none;margin-top:8px;box-shadow:none}}
+
+@media(max-width:860px){#navigation{max-height:calc(100dvh - 78px);overflow-y:auto;overscroll-behavior:contain}.header-hours .hours-panel{position:static;width:100%;max-width:none;margin-top:8px;box-shadow:none}}
