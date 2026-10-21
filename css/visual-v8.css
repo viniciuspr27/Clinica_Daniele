@@ -1,0 +1,148 @@
+/* Refinamento visual: hierarquia legível, grade equilibrada e ações consistentes. */
+body { color: #303b2d; }
+header { background: #f8f6f0f2; border-bottom-color: #e6e3da; }
+.btn { border-radius: 12px; box-shadow: 0 5px 15px #30392a09; }
+.section-heading h2 { text-wrap: balance; }
+.section-heading > p, .about-copy > p:not(.eyebrow) { line-height: 1.85; }
+.hero.hero-photo { margin-top: 22px; border: 1px solid #e8e4da; border-radius: 28px; }
+.hero-photo .lead { font-size: 16px; line-height: 1.9; }
+.hero-photo .hero-visual figcaption { border-radius: 16px; box-shadow: 0 8px 25px #30392a0b; }
+.values { margin-top: 24px; padding-block: 24px; color: #59634e; border-color: #e2e3d8; }
+
+/* A seção possui três cartões acima e dois mais amplos abaixo. */
+.care-section { padding-block: 84px; }
+.care-section .care-heading { align-items: center; gap: 32px; margin-bottom: 32px; }
+.care-section .care-heading h2 { font-size: clamp(38px, 4.5vw, 54px); line-height: 1.12; }
+.care-section .care-intro { max-width: 330px; }
+.care-section .care-intro > p { font-size: 15px; color: #65705c; }
+.care-section .care-help { margin-top: 12px; font-size: 12px; }
+.care-section .care-toolbar { align-items: center; gap: 16px; margin: 0 0 30px; }
+.care-section .care-toolbar .filters { max-width: 100%; padding: 6px; gap: 4px; border: 1px solid #e2e4d8; border-radius: 18px; background: #eeefe6; }
+.care-section .care-toolbar .filters button { min-height: 44px; padding: 11px 16px; border-radius: 12px; font-size: 12px; line-height: 1.4; color: #5a654f; }
+.care-section .care-toolbar .filters button[aria-pressed=true] { color: #fffefa; background: #414e32; border-color: #414e32; box-shadow: 0 4px 12px #34422a14; }
+.care-section .care-result-count { color: #68725e; font-size: 12px; letter-spacing: 0; }
+.care-section .care-grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 26px; }
+.care-section .care-card { grid-column: span 2; display: flex; flex-direction: column; border: 1px solid #e0e3d8; border-radius: 24px; background: #fffefa; box-shadow: 0 5px 22px #3e493206; overflow: hidden; }
+.care-section .care-card:nth-child(n+4) { grid-column: span 3; }
+.care-section .care-photo { width: 100%; flex-shrink: 0; aspect-ratio: 1.55; min-height: 0; height: auto; border-bottom: 1px solid #e0e3d8; }
+.care-section .care-image { width: 100%; height: 100%; aspect-ratio: 1.55; object-fit: cover; }
+.care-section .care-card:nth-child(n+4) .care-photo,
+.care-section .care-card:nth-child(n+4) .care-image { aspect-ratio: 2.05; }
+.care-section .care-photo::after { background: linear-gradient(180deg, #20291908 0%, transparent 45%, #20291980 100%); }
+.care-section .care-photo > .care-category { top: 16px; left: 16px; padding: 7px 12px; font-size: 11px; letter-spacing: 0; background: #fffefaf5; border-color: #ffffffd9; box-shadow: 0 3px 10px #25351d09; }
+.care-section .care-zoom { top: 14px; right: 14px; background: #fffefaf0; border-color: #ffffffb8; }
+.care-section .care-photo > .care-photo-caption { bottom: 19px; left: 24px; right: 24px; font: italic 20px/1.3 Georgia, serif; letter-spacing: -.25px; text-shadow: 0 2px 7px #20301d4d; }
+.care-section .card-body { display: flex; flex-direction: column; min-width: 0; padding: 27px 25px 25px; }
+.care-section p.care-overline, .care-section .care-tag { display: none; }
+.care-section .card-body h3 { min-height: 2.4em; margin: 0; font-size: 28px; line-height: 1.2; letter-spacing: -.7px; color: #34422b; text-wrap: balance; }
+.care-section .card-body > p:not(.care-overline) { flex: 0 0 auto; min-height: 5.1em; margin: 13px 0 0; font-size: 14px; line-height: 1.7; color: #65705e; }
+.care-section .care-card:nth-child(n+4) .card-body h3,
+.care-section .care-card:nth-child(n+4) .card-body > p:not(.care-overline) { min-height: 0; }
+.care-section .care-actions { display: grid; grid-template-columns: 1fr 1fr; align-items: stretch; gap: 10px; margin-top: 25px; padding-top: 0; border: 0; }
+.care-section .care-actions .card-link { display: flex; align-items: center; justify-content: center; gap: 8px; min-width: 0; min-height: 46px; padding: 10px 8px; border: 1px solid #dce2d1; border-radius: 11px; color: #414e32; background: #f0f3e9; font: 600 12px/1.4 Arial, sans-serif; }
+.care-section .care-actions .card-link > span { width: auto; height: auto; border: 0; font-size: 17px; }
+.care-section .care-select { min-width: 0; min-height: 46px; padding: 10px 8px; gap: 5px; border: 1px solid #414e32; border-radius: 11px; background: #414e32; color: #fffefa; font: 600 12px/1.4 Arial, sans-serif; white-space: normal; }
+.care-section .care-select-label { text-align: center; }
+.care-section .care-select-icon { flex: 0 0 15px; }
+.care-section .care-select[aria-pressed=true] { background: #28381f; border-color: #28381f; }
+.care-section .care-card.is-selected { border-color: #677a52; box-shadow: 0 0 0 1px #677a52, 0 12px 28px #34422a0d; }
+.care-section .care-footnote { margin-top: 28px; padding: 17px 22px; border-color: #e0e4d5; border-radius: 14px; background: #eef1e6; }
+.care-section .care-footnote p { font-size: 12px; }
+.care-section .image-note { margin-top: 13px; font-size: 11px; color: #707866; }
+.care-section .care-selection { margin-top: 26px; padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px #34422a0d; }
+.care-section .care-selection-copy { min-width: 0; }
+.care-section .care-selected-list { gap: 9px; }
+.care-section .care-selected-list li > span { font-size: 12px; }
+.care-section .care-selection h3 { font-size: 29px; }
+.care-section .care-selection-actions .btn { font-size: 12px; border-radius: 12px; }
+
+/* Contorna o vazio criado pela filtragem sem deixar posições fixas. */
+.care-section .care-grid:has(.care-card[hidden]) { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.care-section .care-grid:has(.care-card[hidden]) .care-card { grid-column: auto; }
+.care-section .care-grid:has(.care-card[hidden]) .care-photo,
+.care-section .care-grid:has(.care-card[hidden]) .care-image { aspect-ratio: 1.55; }
+
+/* Acabamento do restante da página. */
+.finder { border-block-color: #e0e5d6; background: #edf0e4; }
+.finder-panel { border-radius: 24px; padding: 34px; box-shadow: 0 10px 35px #35432b07; }
+.choices label > span { min-height: 64px; border-radius: 12px; font-size: 13px; }
+.choices input:checked + span { background: #e9eedf; border-color: #667952; }
+.journey li { padding-top: 24px; border-top-color: #dce2d1; }
+.journey p { font-size: 14px; line-height: 1.8; }
+.faq-list details { border-color: #dce2d1; }
+.faq-list summary { min-height: 66px; font-size: 15px; }
+.faq-list details p { font-size: 14px; line-height: 1.8; }
+.contact-card { border-radius: 26px; box-shadow: 0 16px 45px #34422a0e; }
+.gallery-contact { border-radius: 18px; }
+dialog { border-radius: 24px; }
+
+@media (hover: hover) and (pointer: fine) {
+  .care-section .care-card:hover { transform: translateY(-4px); border-color: #c4ceb7; box-shadow: 0 16px 36px #34422a0e; }
+  .care-section .care-select:not([aria-pressed=true]):hover { background: #2f4025; border-color: #2f4025; color: #fffefa; }
+  .care-section .care-actions .card-link:hover { background: #e6ecdb; }
+}
+@media (max-width: 1000px) and (min-width: 701px) {
+  .care-section .care-grid,
+  .care-section .care-grid:has(.care-card[hidden]) { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+  .care-section .care-card,
+  .care-section .care-card:nth-child(n+4) { grid-column: auto; }
+  .care-section .care-card:last-child { grid-column: 1 / -1; }
+  .care-section .care-grid:has(.care-card[hidden]) .care-card { grid-column: auto; }
+  .care-section .care-photo, .care-section .care-image,
+  .care-section .care-card:nth-child(n+4) .care-photo,
+  .care-section .care-card:nth-child(n+4) .care-image { aspect-ratio: 1.65; }
+  .care-section .care-card:last-child .care-photo,
+  .care-section .care-card:last-child .care-image { aspect-ratio: 2.5; }
+  .care-section .care-grid:has(.care-card[hidden]) .care-photo,
+  .care-section .care-grid:has(.care-card[hidden]) .care-image { aspect-ratio: 1.65; }
+  .care-section .card-body h3 { font-size: 27px; }
+  .care-section .care-result-count { display: block; }
+  .care-section .care-actions { flex-direction: row; }
+}
+@media (max-width: 760px) {
+  .hero.hero-photo { margin-top: 10px; border-radius: 22px; }
+  .hero-photo .lead { font-size: 14px; line-height: 1.8; }
+  .values { margin-top: 16px; gap: 12px 20px; padding-block: 20px; }
+  .care-section { padding-block: 56px; }
+  .care-section .care-heading { margin-bottom: 26px; }
+  .care-section .care-intro { max-width: 100%; }
+  .care-section .care-intro > p { font-size: 14px; }
+  .care-section .care-heading h2 { font-size: clamp(37px, 7vw, 46px); }
+  .care-section .care-selection { padding: 26px 22px; }
+  .finder-panel { padding: 28px 22px; border-radius: 21px; }
+}
+@media (max-width: 700px) {
+  .care-section .care-grid,
+  .care-section .care-grid:has(.care-card[hidden]) { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  .care-section .care-card,
+  .care-section .care-card:nth-child(n+4),
+  .care-section .care-grid:has(.care-card[hidden]) .care-card { grid-column: auto; border-radius: 22px; }
+  .care-section .care-photo, .care-section .care-image,
+  .care-section .care-card:nth-child(n+4) .care-photo,
+  .care-section .care-card:nth-child(n+4) .care-image { aspect-ratio: 1.55; }
+  .care-section .card-body { padding: 25px 23px 23px; }
+  .care-section .card-body h3 { min-height: 0; font-size: 29px; text-wrap: pretty; }
+  .care-section .card-body > p:not(.care-overline) { min-height: 0; font-size: 14px; line-height: 1.8; }
+  .care-section .care-toolbar { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 24px; }
+  .care-section .care-toolbar .filters { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); width: 100%; gap: 5px; padding: 6px; border-radius: 17px; }
+  .care-section .care-toolbar .filters button { min-height: 44px; padding: 10px 5px; font-size: 11px; }
+  .care-section .care-result-count { display: block; margin: 0 2px; font-size: 11px; }
+  .care-section .care-photo > .care-photo-caption { left: 23px; font-size: 20px; }
+  .care-section .care-actions { margin-top: 22px; }
+  .care-section .care-footnote { align-items: flex-start; padding: 16px 18px; }
+  .care-section .care-footnote p { font-size: 12px; }
+  .care-section .image-note { font-size: 10px; line-height: 1.8; }
+  .faq-list summary { font-size: 14px; }
+  .choices label > span { font-size: 12px; }
+}
+@media (max-width: 360px) {
+  .care-section .card-body { padding-inline: 20px; }
+  .care-section .card-body h3 { font-size: 26px; }
+  .care-section .care-actions { gap: 7px; }
+  .care-section .care-actions .card-link,
+  .care-section .care-select { font-size: 11px; padding-inline: 6px; }
+  .care-section .care-toolbar .filters button { font-size: 10px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .care-section .care-card:hover { transform: none; }
+}

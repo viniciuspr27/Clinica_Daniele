@@ -9,7 +9,7 @@ window.CLINIC_CONFIG = {
   preview: true, // false somente após validar textos, serviços e imagens
   ownerPhoto: '', // Exemplo de caminho: assets/images/daniele.jpg
   ownerBio: '',
-  servicePhotos: { facial: '', corporal: '', bemestar: '' },
+  servicePhotos: { facial: '', corporal: '', posoperatorio: '', coluna: '', ortopedia: '' },
   // Somente fotos reais autorizadas. Exemplo de estrutura:
   // { src: 'assets/images/recepcao.jpg', alt: 'Recepção da clínica', caption: 'Recepção' }
   gallery: [],

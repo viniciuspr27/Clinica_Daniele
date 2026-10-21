@@ -4,7 +4,7 @@
   if (!section) return;
   const $ = selector => document.querySelector(selector);
   const $$ = selector => [...document.querySelectorAll(selector)];
-  const names = { facial: 'Estética facial', corporal: 'Dermatofuncional', bemestar: 'Saúde integrativa' };
+  const names = { facial: 'Estética facial', corporal: 'Dermatofuncional', posoperatorio: 'Pós-operatório de cirurgia plástica', coluna: 'Coluna', ortopedia: 'Ortopedia' };
   const selected = new Set();
   const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const running = new Map();
