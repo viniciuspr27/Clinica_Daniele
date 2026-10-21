@@ -82,7 +82,10 @@
     lastInterest = [...subject.options].some(item => item.value === interest) ? interest : 'Uma primeira orientação';
     currentGoal = goal; subject.value = lastInterest; buildMessage(); openDialog($('#contactDialog'));
   }
-  $$('[data-contact]').forEach(button => button.addEventListener('click', () => openContact(button.dataset.interest || lastInterest)));
+  $$('[data-contact]').forEach(button => button.addEventListener('click', () => {
+    openContact(button.dataset.interest || lastInterest);
+    if (button.dataset.contactMessage) { message.value = button.dataset.contactMessage; syncContact(); }
+  }));
   if (hasWhatsApp) $$('[data-contact-label]').forEach(label => { label.textContent = 'Conversar no WhatsApp'; });
   $('#contactIntro').textContent = hasWhatsApp
     ? 'Confira sua mensagem e continue no WhatsApp. O atendimento e a disponibilidade serão confirmados pela clínica.'
@@ -123,28 +126,6 @@
     });
     $('#filterStatus').textContent = count === 1 ? '1 área disponível.' : count + ' áreas disponíveis.';
   }));
-  const form = $('#interestForm');
-  function finderStep(step) {
-    $('#stepOne').hidden = step !== 1; $('#stepTwo').hidden = step !== 2;
-    $('#stepLabel').textContent = 'Passo 0' + step + ' de 02';
-    $$('.progress span').forEach((dot, index) => dot.classList.toggle('active', index < step));
-    if (step === 2) $('#goalLegend').focus({ preventScroll: true });
-    else $('input[name="interest"]:checked', form)?.focus({ preventScroll: true });
-  }
-  form.addEventListener('change', () => {
-    $('#nextStep').disabled = !$('input[name="interest"]:checked', form);
-    $('#finishFinder').disabled = !$('input[name="goal"]:checked', form);
-  });
-  $('#nextStep').addEventListener('click', () => {
-    const interest = $('input[name="interest"]:checked', form); if (!interest) return;
-    $('#chosenInterest').textContent = 'Seu interesse: ' + interest.value; finderStep(2);
-  });
-  $('#backStep').addEventListener('click', () => finderStep(1));
-  form.addEventListener('submit', event => {
-    event.preventDefault();
-    const interest = $('input[name="interest"]:checked', form), goal = $('input[name="goal"]:checked', form);
-    if (interest && goal) openContact(interest.value, goal.value);
-  });
   // Informações oficiais opcionais. Os valores são tratados como texto.
   if (config.ownerBio) $('#ownerBio').textContent = String(config.ownerBio);
   const ownerPhoto = safeUrl(config.ownerPhoto, true);
@@ -160,12 +141,10 @@
     probe.addEventListener('load', () => { visual.style.backgroundImage = 'url(' + JSON.stringify(url) + ')'; visual.classList.add('custom-photo'); });
     probe.src = url;
   }
-  if (config.address) { $('#addressText').textContent = String(config.address); $('#addressBlock').hidden = false; }
-  if (config.hours) { $('#hoursText').textContent = String(config.hours); $('#hoursBlock').hidden = false; }
-  const maps = safeUrl(config.mapsUrl), instagram = safeUrl(config.instagramUrl);
-  if (maps && config.address) { $('#mapsLink').href = maps; $('#mapsLink').hidden = false; }
-  if (instagram) { $('#instagramLink').href = instagram; $('#instagramLink').hidden = false; }
-  $('#contactDetails').hidden = !(config.address || config.hours || instagram);
+  $$('[data-whatsapp-direct]').forEach(link => {
+    link.hidden = !hasWhatsApp;
+    if (hasWhatsApp) link.href = 'https://wa.me/' + phone + '?text=' + encodeURIComponent('Olá! Gostaria de conhecer o atendimento da clínica. Podem me orientar?');
+  });
   $('#previewNote').hidden = config.preview === false; $('#year').textContent = String(new Date().getFullYear());
   const gallery = (Array.isArray(config.gallery) ? config.gallery : []).filter(item => item && item.alt && safeUrl(item.src, true));
   function showPhoto(index) {

@@ -1,41 +1,49 @@
-/* Entrada por necessidade, integrada aos detalhes e ao contato existentes. */
-.help-section { padding-block: 72px 28px; }
-.help-heading { align-items: center; margin-bottom: 30px; }
-.help-heading h2 { font-size: clamp(37px, 4.5vw, 53px); line-height: 1.13; }
-.help-heading > p { max-width: 340px; font-size: 15px; line-height: 1.85; }
-.help-options { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
-.help-choice { position: relative; display: flex; flex-direction: column; align-items: flex-start; min-width: 0; min-height: 194px; padding: 25px; text-align: left; border: 1px solid #dfe4d5; border-radius: 20px; background: #fffefa; color: #34422b; box-shadow: 0 5px 20px #34422a04; transition: background .2s, border-color .2s, transform .2s, box-shadow .2s; }
-.help-icon { display: grid; place-items: center; width: 44px; height: 44px; margin-bottom: 18px; border: 1px solid #e1e7d6; border-radius: 13px; background: #eef2e5; color: #536641; }
-.help-icon svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
-.help-choice-title { display: block; padding-right: 18px; font-size: 17px; font-weight: 600; line-height: 1.45; letter-spacing: -.2px; }
-.help-choice-note { display: block; margin-top: 8px; font-size: 12px; line-height: 1.6; color: #707a65; }
-.help-choice-arrow { position: absolute; top: 30px; right: 24px; font-size: 23px; line-height: 1; color: #8b764e; }
-.help-choice--guidance { background: #eaf0df; border-color: #d5dfc5; }
-.help-choice--guidance .help-icon { background: #fffefa; border-color: #d5dfc5; }
-.help-bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px 28px; margin-top: 23px; padding-bottom: 29px; border-bottom: 1px solid #e0e4d7; }
-.help-bottom p { max-width: 650px; font-size: 12px; line-height: 1.7; color: #737c69; }
-.help-bottom .text-link { font-size: 12px; }
+/* Apresentação editorial das necessidades, com expansão nativa e contato direto. */
+.help-section { padding-block: 78px 22px; }
+.help-layout { display: grid; grid-template-columns: .85fr 1.15fr; align-items: start; gap: 76px; }
+.help-intro { padding-top: 7px; }
+.help-intro .eyebrow { font-size: 10px; letter-spacing: 1.65px; margin-bottom: 20px; }
+.help-intro h2 { font-size: clamp(38px, 4.3vw, 52px); line-height: 1.12; text-wrap: balance; }
+.help-intro > p:not(.eyebrow) { max-width: 350px; margin-top: 23px; color: #63705a; font-size: 15px; line-height: 1.85; }
+.help-intro > p.help-instruction { margin-top: 15px; font-size: 12px; color: #7a826f; }
+.help-guidance { max-width: 350px; margin-top: 33px; padding-top: 22px; border-top: 1px solid #dfe4d6; }
+.help-guidance > p { font-size: 13px; line-height: 1.7; color: #63705a; }
+.help-guidance-link, .help-conversation { display: inline-flex; align-items: center; justify-content: flex-start; gap: 14px; min-height: 44px; padding: 6px 0; border: 0; border-radius: 0; background: transparent; color: #414e32; font: 600 13px/1.5 Arial, sans-serif; text-align: left; text-decoration: underline; text-decoration-color: #b5c0a6; text-underline-offset: 6px; }
+.help-guidance-link span, .help-conversation span { font-size: 18px; text-decoration: none; }
+.help-needs { min-width: 0; border-top: 1px solid #cbd4bf; }
+.help-need { margin: 0; padding: 0; border: 0; border-bottom: 1px solid #d8dfcf; border-radius: 0; background: transparent; box-shadow: none; }
+.help-need > summary { display: grid; grid-template-columns: 28px minmax(0, 1fr) 24px; align-items: center; gap: 17px; min-height: 87px; padding: 21px 0; list-style: none; cursor: pointer; color: #35442d; }
+.help-need > summary::-webkit-details-marker { display: none; }
+.help-need > summary::marker { content: ''; }
+.help-need-number { align-self: start; padding-top: 6px; color: #9b855d; font: 11px/1.5 Arial, sans-serif; letter-spacing: .5px; }
+.help-need-title { font: 23px/1.4 Georgia, 'Times New Roman', serif; letter-spacing: -.45px; }
+.help-need-toggle { display: grid; place-items: center; width: 24px; height: 24px; color: #899775; font: 25px/1 Arial, sans-serif; transition: transform .2s; }
+.help-need[open] > summary { padding-bottom: 13px; }
+.help-need[open] .help-need-toggle { transform: rotate(45deg); color: #414e32; }
+.help-need-content { padding: 0 40px 23px 45px; }
+.help-need-content > p { max-width: 430px; color: #65705e; font-size: 14px; line-height: 1.85; }
+.help-need-content > p.help-need-area { margin-bottom: 10px; color: #8e7349; font-size: 10px; line-height: 1.6; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; }
+.help-conversation { margin-top: 13px; }
+.help-note { margin-top: 30px; padding-top: 22px; border-top: 1px solid #e1e5d8; color: #7a826f; font-size: 11px; line-height: 1.8; }
+.help-note a { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; margin-left: 15px; color: #536345; text-decoration: underline; text-underline-offset: 4px; }
 @media (hover: hover) and (pointer: fine) {
-  .help-choice:hover { transform: translateY(-3px); background: #f4f6ee; border-color: #b7c5a4; box-shadow: 0 12px 28px #34422a09; }
-  .help-choice--guidance:hover { background: #e1eacf; }
+  .help-need > summary:hover .help-need-title { color: #8a6c42; }
+  .help-guidance-link:hover, .help-conversation:hover { color: #8a6c42; }
 }
-@media (max-width: 1000px) {
-  .help-options { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (max-width: 1000px) { .help-layout { gap: 40px; } .help-need-title { font-size: 21px; } }
+@media (max-width: 760px) {
+  .help-section { padding-block: 49px 8px; }
+  .help-layout { grid-template-columns: minmax(0, 1fr); gap: 29px; }
+  .help-intro { padding: 0; }
+  .help-intro h2 { font-size: clamp(37px, 8vw, 46px); }
+  .help-intro > p:not(.eyebrow) { max-width: 100%; margin-top: 19px; font-size: 14px; }
+  .help-intro > p.help-instruction { margin-top: 12px; font-size: 12px; }
+  .help-guidance { max-width: 100%; margin-top: 20px; padding-top: 17px; }
+  .help-need > summary { grid-template-columns: 22px minmax(0, 1fr) 22px; gap: 12px; min-height: 76px; padding-block: 19px; }
+  .help-need-title { font-size: 21px; }
+  .help-need-content { padding: 0 20px 21px 34px; }
+  .help-need-content > p { font-size: 14px; }
+  .help-note { margin-top: 22px; padding-top: 16px; }
+  .help-note a { margin-left: 0; display: flex; width: fit-content; }
 }
-@media (max-width: 700px) {
-  .help-section { padding-block: 48px 4px; }
-  .help-heading { display: block; margin-bottom: 25px; }
-  .help-heading > p { max-width: 100%; margin-top: 18px; font-size: 14px; }
-  .help-options { grid-template-columns: minmax(0, 1fr); gap: 12px; }
-  .help-choice { display: grid; grid-template-columns: 44px minmax(0, 1fr) 17px; grid-template-rows: auto auto; align-items: center; column-gap: 15px; min-height: 106px; padding: 21px 18px; border-radius: 17px; }
-  .help-icon { grid-column: 1; grid-row: 1 / 3; margin: 0; }
-  .help-choice-title { grid-column: 2; padding: 0; font-size: 15px; }
-  .help-choice-note { grid-column: 2; margin-top: 5px; font-size: 12px; }
-  .help-choice-arrow { position: static; grid-column: 3; grid-row: 1 / 3; font-size: 20px; }
-  .help-bottom { display: block; padding-bottom: 22px; margin-top: 20px; }
-  .help-bottom .text-link { margin-top: 8px; }
-}
-@media (prefers-reduced-motion: reduce) {
-  .help-choice { transition: none; }
-  .help-choice:hover { transform: none; }
-}
+@media (prefers-reduced-motion: reduce) { .help-need-toggle { transition: none; } }

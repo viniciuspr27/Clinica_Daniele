@@ -1,0 +1,61 @@
+/* Fluxo enxuto, visita em destaque e contato sempre acessível. */
+.care-section { padding-bottom: 46px; }
+.help-section { padding-top: 40px; padding-bottom: 32px; }
+.help-layout { padding-top: 40px; border-top: 1px solid #dfe4d5; }
+.visit-section { padding-bottom: 68px; }
+.visit-heading { align-items: center; gap: 36px; margin-bottom: 30px; }
+.visit-heading > p { max-width: 360px; font-size: 14px; line-height: 1.85; }
+.visit-layout { display: grid; grid-template-columns: .95fr 1.05fr; overflow: hidden; border: 1px solid #dfe4d6; border-radius: 26px; background: #fffefa; }
+.visit-info { display: flex; flex-direction: column; align-items: flex-start; min-width: 0; padding: 38px; }
+.visit-label { display: block; font: 600 10px/1.7 Arial, sans-serif; text-transform: uppercase; letter-spacing: 1.2px; color: #8c724c; }
+.visit-info h3 { margin-top: 16px; font-size: 36px; line-height: 1.2; color: #35452c; }
+.visit-info h3 span { display: block; margin-top: 8px; font: 12px/1.7 Arial, sans-serif; letter-spacing: 0; color: #758066; }
+.visit-info address { max-width: 340px; margin-top: 24px; font: normal 14px/1.9 Arial, sans-serif; color: #58664d; }
+.visit-address-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 4px 22px; margin-top: 13px; }
+.visit-address-actions .text-link, .visit-address-actions .text-button { font-size: 12px; }
+.visit-address-actions .text-button { color: #768269; text-decoration: underline; text-underline-offset: 4px; }
+.visit-info .copy-address-status { margin: 0; min-height: 0; font-size: 11px; }
+.visit-info .copy-address-status:empty { display: none; }
+.visit-info #addressCopyFallback { width: 100%; margin-top: 8px; padding: 10px; font-size: 12px; }
+.visit-hours { width: 100%; margin-top: 24px; padding-top: 21px; border-top: 1px solid #e3e7dc; }
+.visit-hours dl { margin: 11px 0 0; }
+.visit-hours dl > div { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px 20px; padding-block: 5px; font-size: 13px; color: #58664d; }
+.visit-hours dd { margin: 0; color: #34462b; }
+.visit-hours > p { margin-top: 9px; font-size: 10px; line-height: 1.7; color: #7c856f; }
+.visit-contact { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; width: 100%; margin-top: 27px; }
+.visit-contact > a:first-child { min-height: 44px; display: inline-flex; align-items: center; font-size: 15px; color: #3e5132; }
+.visit-contact .btn { min-height: 46px; font-size: 12px; padding-inline: 17px; gap: 12px; }
+.visit-map { display: flex; flex-direction: column; min-width: 0; border-left: 1px solid #dfe4d6; background: #f0f3e9; }
+.visit-map-stage { flex: 1; min-height: 365px; }
+.visit-map-cover { position: relative; isolation: isolate; overflow: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0; height: 100%; min-height: 365px; padding: 36px; text-align: center; background: radial-gradient(ellipse at 50% 25%, #f9fbf4, #e9efdf 85%); }
+.visit-map-cover::before { content: ''; position: absolute; z-index: -1; inset: -40%; opacity: .55; transform: rotate(-28deg); background: repeating-linear-gradient(90deg, transparent 0 96px, #cbd6be66 97px 98px, transparent 99px 160px); pointer-events: none; }
+.visit-map-symbol { display: grid; place-items: center; width: 58px; height: 58px; margin-bottom: 20px; border: 1px solid #c6d2b7; border-radius: 50%; background: #f8faf3; color: #627a4e; }
+.visit-map-symbol svg { width: 28px; height: 28px; fill: none; stroke: currentColor; stroke-width: 1.4; }
+.visit-map-cover h3 { margin-top: 12px; font-size: 33px; line-height: 1.15; color: #3c5030; }
+.visit-map-cover > p { max-width: 270px; margin-top: 15px; font-size: 13px; line-height: 1.8; color: #708061; }
+.visit-map-cover .btn { margin-top: 21px; min-height: 46px; font-size: 12px; }
+.visit-map-cover > a { display: inline-flex; align-items: center; min-height: 44px; margin-top: 7px; color: #617651; font-size: 11px; text-decoration: underline; text-underline-offset: 4px; }
+.visit-map-stage iframe { display: block; width: 100%; height: 100%; min-height: 400px; border: 0; }
+.visit-routes { padding: 22px 26px; border-top: 1px solid #dce3d2; background: #f5f7ee; }
+.visit-routes > div { display: flex; flex-wrap: wrap; gap: 6px 20px; margin-top: 10px; }
+.visit-routes a { display: inline-flex; align-items: center; min-height: 44px; border-bottom: 1px solid #b9c8a9; color: #506742; font-size: 12px; }
+.whatsapp-shortcut { position: fixed; z-index: 50; right: 24px; bottom: calc(22px + env(safe-area-inset-bottom, 0px)); display: inline-flex; align-items: center; justify-content: center; gap: 11px; min-height: 56px; padding: 14px 20px 14px 16px; border: 1px solid #26834a; border-radius: 50px; background: #217a43; color: white; box-shadow: 0 7px 22px #183e242b; font: 600 13px/1.4 Arial, sans-serif; }
+.whatsapp-shortcut svg { width: 27px; height: 27px; flex-shrink: 0; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+@media (hover: hover) and (pointer: fine) { .whatsapp-shortcut:hover { background: #186636; } .visit-routes a:hover { color: #8c724c; } }
+@media (max-width: 1000px) { .visit-info { padding: 29px; } .visit-map-cover { padding: 28px; } }
+@media (max-width: 760px) {
+  .care-section { padding-bottom: 30px; }
+  .help-section { padding-top: 22px; }
+  .help-layout { padding-top: 28px; }
+  .visit-section { padding-bottom: 46px; }
+  .visit-layout { grid-template-columns: minmax(0, 1fr); border-radius: 22px; }
+  .visit-info { padding: 28px 24px; }
+  .visit-info h3 { font-size: 32px; }
+  .visit-map { border-left: 0; border-top: 1px solid #dfe4d6; }
+  .visit-map-stage, .visit-map-cover { min-height: 340px; }
+  .visit-map-stage iframe { min-height: 340px; }
+  .visit-routes { padding: 21px 24px; }
+  .whatsapp-shortcut { right: 17px; bottom: calc(18px + env(safe-area-inset-bottom, 0px)); width: 58px; min-height: 58px; padding: 14px; }
+  .whatsapp-shortcut > span { display: none; }
+  footer { padding-bottom: calc(85px + env(safe-area-inset-bottom, 0px)); }
+}
