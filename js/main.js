@@ -16,7 +16,7 @@
   };
   const nav = $('#navigation'), menu = $('.menu');
   const subject = $('#subject'), message = $('#message');
-  let activeService = 'facial', lastInterest = 'Uma primeira orientação', currentGoal = '';
+  let activeService = 'facial', lastInterest = 'Uma primeira orientação', currentGoal = '', serviceMessage = '';
   let photoIndex = 0, dialogTrigger = null;
 
   function safeUrl(value, local = false) {
@@ -82,7 +82,7 @@
     lastInterest = [...subject.options].some(item => item.value === interest) ? interest : 'Uma primeira orientação';
     currentGoal = goal; subject.value = lastInterest; buildMessage(); openDialog($('#contactDialog'));
   }
-  $$('[data-contact]').forEach(button => button.addEventListener('click', () => openContact()));
+  $$('[data-contact]').forEach(button => button.addEventListener('click', () => openContact(button.dataset.interest || lastInterest)));
   if (hasWhatsApp) $$('[data-contact-label]').forEach(label => { label.textContent = 'Conversar no WhatsApp'; });
   $('#contactIntro').textContent = hasWhatsApp
     ? 'Confira sua mensagem e continue no WhatsApp. O atendimento e a disponibilidade serão confirmados pela clínica.'
@@ -103,13 +103,17 @@
   });
   $$('[data-service]').forEach(button => button.addEventListener('click', () => {
     activeService = button.dataset.service;
+    serviceMessage = button.dataset.contactMessage || '';
     const service = services[activeService];
     $('#serviceTitle').textContent = service.title; $('#serviceEyebrow').textContent = service.eyebrow;
     $('#serviceDescription').textContent = service.description;
     $('#serviceTopics').replaceChildren(...service.topics.map(topic => { const li = document.createElement('li'); li.textContent = topic; return li; }));
     openDialog($('#serviceDialog'));
   }));
-  $('#serviceContact').addEventListener('click', () => openContact(services[activeService].title));
+  $('#serviceContact').addEventListener('click', () => {
+    openContact(services[activeService].title);
+    if (serviceMessage) { message.value = serviceMessage; syncContact(); }
+  });
   $$('[data-filter]').forEach(button => button.addEventListener('click', () => {
     $$('[data-filter]').forEach(item => item.setAttribute('aria-pressed', String(item === button)));
     let count = 0;
